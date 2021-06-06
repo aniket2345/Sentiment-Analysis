@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+    a:link{
+        color:white;
+    }
+
+    *{
+        padding:0;
+        margin:0;
+    }
+    body{
+        background-image:url("static/website_attr/background-4.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position:absolute;
+        height:47rem;
+        width:90rem;
+        top:3rem;
+    }
+    div.main{
+        position:relative;
+        height:100vh;
+        width:100vw;
+        display:grid;
+        grid-template-areas: "main-left main-right";
+    }
+    div.main-left{
+        position:relative;
+        display:grid;
+        grid-area : main-left;
+    }
+    div.main-right{
+        position:relative;
+        height:100%;
+        display:grid;
+        grid-area : main-right;
+        grid-template-areas:
+        "title"
+        "title"
+        "subtitle"
+        "blank";
+    }
+    div.title{
+        grid-area : title;
+        position:relative;
+    }
+    div.subtitle{
+        grid-area : subtitle;
+        position:relative;
+    }
+    div.blank{
+        grid-area : blank;
+    }
+    /*div.logo{
+        transform:translateY(900%);ss
+    }*/
+    /*.title-words{
+        font-size: 140px;
+        position:relative;
+        top:50%;
+        text-align:center;
+    }*/
+    div.title-words{
+        text-align:center;
+        padding:0;
+        margin:0;
+        font-size:6em;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        /*-webkit-box-reflect:below 0.01px linear-gradient(transparent,#0001);*/
+        outline:none;
+        line-height:1em;
+        font-family: 'Oswald', sans-serif;
+        color:white;
+        /*text-shadow: 0 0 10px white,
+        0 0 40px #ADA6B2;
+        top:75%;
+        */
+        text-shadow: 0 0 10px white,
+        0 0 40px white,
+        0 0 80px #ADA6B2,
+        0 0 160px white;
+        top:75%;
+
+    }
+    div.subtitle-words{
+        text-align:left;
+        padding:0;
+        margin:0;
+        font-size:1.1em;
+        font-family: 'DotGothic16', sans-serif;
+        position:absolute;
+        top:20%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        color:#bababa;
+        color:#ADA6B2;
+    }
+    /*div.info{
+        text-align:left;
+        top:22.5rem;
+        left:17.5rem;
+    }*/
+    div.content{
+        top:-1rem;
+        padding:0;
+        margin:0;
+        background-color:#141414;
+        color:black;
+        position:relative;
+        display:grid;
+        grid-template-areas:
+        "about"
+        "main-frame"
+        "row-one"
+        "row-two"
+        "row-three"
+        "row-four"
+        "blank-row";
+        width:100%;
+    }
+    div.about{
+        grid-area:about;
+        color:white;
+        padding-top:10rem;
+        padding-left:10rem;
+        padding-right:10rem;
+        font-family: 'DotGothic16', sans-serif;
+    }
+    div.about-text{
+
+        font-size:1.5em;
+        padding-left:2rem;
+    }
+    div.main-frame{
+        font-family: 'DotGothic16', sans-serif;
+        padding:0;
+        margin:0;
+        color:white;
+        position:relative;
+        width:90%;
+        left:5%;
+        font-size:5em;
+        text-align:center;
+        grid-area:main-frame;
+        height:15rem;
+        margin-bottom:10rem;
+    }
+    div.row-one{
+
+        font-family: 'DotGothic16', sans-serif;
+        padding:0;
+        margin:0;
+        color:white;
+        position:relative;
+        width:90%;
+        left:5%;
+        font-size:5em;
+        text-align:center;
+        grid-area:row-one;
+        display:grid;
+        grid-template-areas:"company-one company-two company-three company-four";
+    }
+    div.row-two{
+        font-family: 'DotGothic16', sans-serif;
+        padding:0;
+        margin:0;
+        color:white;
+        position:relative;
+        width:90%;
+        left:5%;
+        font-size:5em;
+        text-align:center;
+        grid-area:row-two;
+        display:grid;
+        grid-template-areas:"company-one company-two company-three company-four";
+    }
+    div.row-three{
+        font-family: 'DotGothic16', sans-serif;
+        padding:0;
+        margin:0;
+        color:white;
+        position:relative;
+        width:90%;
+        left:5%;
+        font-size:5em;
+        text-align:center;
+        grid-area:row-three;
+        display:grid;
+        grid-template-areas:"company-one company-two company-three company-four";
+    }
+    div.row-four{
+        font-family: 'DotGothic16', sans-serif;
+        padding:0;
+        margin:0;
+        color:white;
+        position:relative;
+        width:90%;
+        left:5%;
+        font-size:5em;
+        text-align:center;
+        grid-area:row-four;
+        display:grid;
+        grid-template-areas:"company-one company-two company-three";
+    }
+    div.blank-row{
+        height:8rem;
+        color:black;
+        grid-area:blank-row;
+
+
+
+        font-family: 'DotGothic16', sans-serif;
+        padding-top:10rem;
+        padding-left:10rem;
+        padding-right:10rem;
+        text-align:center;
+        font-size:4em;
+        margin-bottom:4rem;
+    }
+    div.company-one{
+        height:15rem;
+        padding:0;
+        margin:0;
+        position:relative;
+        grid-area:company-one;
+    }
+    div.company-two{
+        padding:0;
+        margin:0;
+        position:relative;
+        grid-area:company-two;
+    }
+    div.company-three{
+        padding:0;
+        margin:0;
+        position:relative;
+        grid-area:company-three;
+    }
+    div.company{
+        position:absolute;
+        width:70%;
+        height:70%;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition:width 0.5s, background-color 0.5s;
+    }
+    div.company-title{
+        text-align:center;
+        padding:0;
+        margin:0;
+        font-size:1em;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    div.bottom{
+        text-align:center;
+        padding:0;
+        margin:0;
+        font-size:0.2em;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        filter:opacity(0%);
+        transition: filter 0.1s;
+    }
+    div.top{
+        text-align:center;
+        padding:0;
+        margin:0;
+        font-size:0.35em;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        filter:opacity(100%);
+        transition: filter 0.5s;
+    }
+    div.company:hover .bottom{
+        filter:opacity(100%);
+    }
+    div.company:hover .top{
+        filter:opacity(0);
+    }
+    div.company:hover{
+        width:75%;
+        height:65%;
+        background-color:black;
+    }
+    div.company-about{
+      font-family: 'Oswald', sans-serif;
+      transform:translateY(330%);
+      font-size:0.3em;
+    }
+    div.title-container{
+      font-family: 'Oswald', sans-serif;
+      position:absolute;
+      width:70%;
+      height:70%;
+      top:50%;
+      left:50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+a:visited{
+    color:white;
+}
+a:unvisited{
+    color:white;
+}
+</style>
+</head>
+<body>
+    <div class='main'>
+        <div class='main-left'>
+
+        </div>
+        <div class='main-right'>
+            <div class='title'>
+                <div class='title-words'>S A P Y</div>
+            </div>
+            <div class='subtitle'>
+                <div class=subtitle-words>
+                    <h3>Sentiment_Analyzer.py</h3><br>
+                    > /Developed by Rishitha<br>
+                    > /Developed by Darshita<br>
+                    > /Developed by Aniket<br>
+                </div>
+            </div>
+            <div class='blank'>
+            </div>
+        </div>
+    </div>
+    <div class='content'>
+        <div class='about'>
+            <h1>> About_</h1>
+            <br>
+            <div class='about-text'>
+              The product is a website application which provides sentiment analysis information about
+              various topics ( Colleges, Movies, Stocks ) in order to assess the
+              general sentiment about the concerned topic
+                <br><br>
+                
+            </div>
+        </div>
+        <div class='main-frame'>
+            <div class='title-container'>
+                <div class='company-title'>
+                    SENTIMENT
+                </div>
+            </div>
+            <div class='about'>
+                <div class='about-text company-about'>
+                    COMPANIES
+                </div>
+            </div>
+        </div>
+        <div class='row-one'>
+            <div class='company-one'>
+                <div class='company'>
+                    <a href="APPLE">
+                    <div class='top'>
+                        APPLE
+                    </div>
+                    
+                    <div class='bottom'>
+                        {{ams[0]}}
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class='company-two'>
+                <div class='company'>
+                    <a href="TESLA">
+                    <div class='top'>
+                        TESLA
+                    </div>
+                    <div class='bottom'>
+                        {{ams[1]}}
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class='company-three'>
+                <div class='company'>
+                    <a href="AMAZON">
+                    <div class='top'>
+                        AMAZON
+                    </div>
+                    <div class='bottom'>
+                        {{ams[2]}}
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <!---<div class='company-four'>
+                <div class='company'>
+                    <a href="UI/NTPC.html">
+                    <div class='top'>
+                        TATASTEEL
+                    </div>
+                    <div class='bottom'>
+                        Negative Sentiment
+                    </div>
+                    </a>
+                </div>
+            </div>--->
+            <br>
+          </div>
+    </div>
+</body>
+</html>
